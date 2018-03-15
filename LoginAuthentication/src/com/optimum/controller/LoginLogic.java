@@ -265,21 +265,16 @@ public class LoginLogic {
 	
 	public void UserAccess() throws SQLException{
 	
-		OUTER:
-		while(true) {
-			System.out.println("Logout?(y/n): ");
-			String ans = ss.nextLine();
+		
+			System.out.println("Logout?(yes/no): ");
+			String ans = ss.next();
 			
-			if((!ans.equals("y")) || (!ans.equals("n"))){
-				System.out.println("Please re-enter a valid option(y/n)");
+			if(ans.equals("yes")){
+				System.out.println("Thank You!");
+				login();
+			}else {
 				UserAccess();
 			}
-			else if(ans.equals("y")) {
-				System.out.println("Thank you!");
-				break OUTER;
-				
-			}
-		}
 	}
 	
 	
