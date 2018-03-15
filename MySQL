@@ -1,0 +1,20 @@
+CREATE DATABASE `loginauthdata` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE TABLE `userdata` (
+  `serialNO` int(10) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(15) DEFAULT NULL,
+  `NRIC` varchar(9) DEFAULT NULL,
+  `EmailAdd` varchar(40) DEFAULT NULL,
+  `Mobile` int(8) DEFAULT NULL,
+  `DOB` date DEFAULT NULL,
+  `Password` varchar(10) DEFAULT NULL,
+  `Role` varchar(7) DEFAULT NULL,
+  `SecurityQuestion` varchar(300) DEFAULT NULL,
+  `SecurityAnswer` varchar(300) DEFAULT NULL,
+  `FirstLog` tinyint(1) DEFAULT NULL,
+  `Status` tinyint(1) DEFAULT NULL,
+  `NumOfAttempts` int(255) DEFAULT NULL,
+  PRIMARY KEY (`serialNO`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+INSERT INTO `userdata` VALUES (1,'admin','T8571935X','admin@theoptimum.net',90057382,'1992-07-23','admin123','Admin',NULL,NULL,NULL,0,NULL),
+(9,'Lahvin','S9226803I','lahvin_619@live.com',90258619,'1992-07-23','thisistest','User','What is your favourite color?','green',1,0,0);
